@@ -1,2 +1,0 @@
-garbage_truck_automation
-Our project here
