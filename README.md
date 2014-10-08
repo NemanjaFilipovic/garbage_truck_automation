@@ -9,7 +9,23 @@ garbage_truck_automation
 
 Roadmap:
 
-10.07.
-  Main matrix structure (demo version 10*10)
-  First graph
-  Shortest rout between two points
+07.10.
+  Main matrix structure (demo version 10*10)  OK
+  First graph                                 OK
+  Shortest rout between two points            OK
+
+08.10.
+  Discuss the Structure of GarbageTrucks      OK
+
+09.10.
+  Structure of the trucks
+     Garbage volume
+     Travelled road length
+     Amount of fuel left
+     
+
+  Array for bins
+     2*n for garbage amount
+         for emptyer truck ID
+
+  
