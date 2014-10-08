@@ -42,6 +42,7 @@ int main()
     nodes[1][0] = 0;
     relax(0);
     for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[0][i]);
+    printf("\n");
     for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[1][i]);
     getchar();
 

@@ -8,11 +8,13 @@
  int mousex,mousey;
  int origin=-1;
  int destination=-1;
+ PrintWriter output;
  
 void setup()
 {
  
  compgraph = new int [graphsize][graphsize];
+ output = createWriter("graph.txt"); 
  
  for(int i=1;i<graphsize/2;i++)
  {
@@ -42,8 +44,12 @@ void draw()
   for(int i=1;i<=xcount;i++)
     for(int j=1;j<=ycount;j++)
     {
-      
+      if((i*10+j)==origin)
+        fill(255,0,0);
+      if((i*10+j)==destination)
+        fill(0,255,0);
       ellipse(i*(2*rad),j*(2*rad), rad,rad);
+        fill(255);
     }
     
     if(origin!=-1 && destination!=-1)
@@ -54,14 +60,22 @@ void draw()
            (destination/10)*(2*rad),
            (destination%10)*(2*rad));  
       strokeWeight(1);
-     origin=-1;
-     destination=-1;
+      
+      compgraph[(origin/10)-1+(origin%10)-1]
+               [(destination/10)-1+(destination%10)-1]       =1;
+      compgraph[(destination/10)-1+(destination%10)-1]
+               [(origin/10)-1+(origin%10)-1]       =1;
+      
+      origin=-1;
+      destination=-1;
      
     }
     
-    print(origin);
+    
+    
+    /*print(origin);
     print("  ");
-    println(destination);
+    println(destination);*/
 }
 
 void mouseClicked()
@@ -82,5 +96,20 @@ void mouseClicked()
         }        
     }
  
+}
+
+void keyPressed() 
+{
+  for(int i=0;i<graphsize;i++)
+  {
+    for(int j=0;j<graphsize;j++)
+    {
+      output.print(compgraph[i][j]);
+      output.print(" "); 
+    }
+    output.println(" ");
+  }
+  output.flush();
+  output.close();
 }
 
