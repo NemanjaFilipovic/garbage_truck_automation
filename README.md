@@ -18,14 +18,21 @@ Roadmap:
   Discuss the Structure of GarbageTrucks      OK
 
 09.10.
-  Structure of the trucks
-     Garbage volume
-     Travelled road length
-     Amount of fuel left
+  Structure of the trucks                     OK
+     Garbage volume                           OK
+     Travelled road length                    OK
+     Amount of fuel left                      OK
      
 
-  Array for bins
-     2*n for garbage amount
-         for emptyer truck ID
+  Array for bins                              OK
+     2*n for garbage amount                   OK
+         for emptyer truck ID                 OK
+
+09.11.
+
+  Cost of the routs
+  coloring of the graph
+  Thinking: Output values of the GraphGenerator
+  
 
   
