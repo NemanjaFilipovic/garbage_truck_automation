@@ -44,10 +44,12 @@ void draw()
   for(int i=1;i<=xcount;i++)
     for(int j=1;j<=ycount;j++)
     {
+      
       if((i*10+j)==origin)
         fill(255,0,0);
       if((i*10+j)==destination)
         fill(0,255,0);
+      
       ellipse(i*(2*rad),j*(2*rad), rad,rad);
         fill(255);
     }
