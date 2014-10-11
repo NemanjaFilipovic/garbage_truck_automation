@@ -31,8 +31,8 @@ Roadmap:
 09.11.
 
   Cost of the routs
-  coloring of the graph
-  Thinking: Output values of the GraphGenerator
+  coloring of the graph                       OK
+  Think: Output values of the GraphGenerator  OK
   
 
   
