@@ -1,0 +1,6 @@
+MEgljelenítés mathlabban, C kód számol
+Lab wiev
+Adatmentés matlabban megjeleníthatõ
+OpenCV (Hosszú idõ megatnulni)
+Forgalom szerinti súlyozás,
+ Gräff József, LabWiev
