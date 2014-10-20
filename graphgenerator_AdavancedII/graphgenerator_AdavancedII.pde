@@ -3,11 +3,12 @@ int[][] graphelements;
 int graphsize = 30;
 int rad = 25;
 PrintWriter output;
+PrintWriter graphnodes;
 int mousex,mousey;
 int origin=-1;
 int destination=1;
 int loopednode=0;
-
+PImage bckgrnd;
 
 
 
@@ -16,12 +17,19 @@ void setup()
  strokeWeight(2);
  compgraph = new int [graphsize][graphsize];
  graphelements = new int [graphsize][2];
+ 
  output = createWriter("graph.txt"); 
- size(600,600);
- background(255);
+ graphnodes = createWriter("nodes.txt");
+ 
+ size(850,400);
+ bckgrnd=loadImage("Eliat.gif");
+ background(bckgrnd);
+
  ellipse(rad/2+10, rad/2+10, rad, rad);
  graphelements[0][0]=rad/2+10;
  graphelements[0][1]=rad/2+10;
+ 
+ 
 
 }
 
@@ -102,13 +110,21 @@ void keyPressed()
 {
   for(int i=0;i<graphsize; i++)
   {
+    graphnodes.print(graphelements[i][0]);
+    graphnodes.print("\t");
+    graphnodes.print(graphelements[i][1]);
+    graphnodes.print("\t");
     for(int j=0;j<graphsize; j++)
-    {  
+    { 
       output.print(compgraph[i][j]);
-      output.print(" "); 
+      output.print("\t"); 
     }
-    output.println(" ");
+    output.println();
+    graphnodes.println();
   }
   output.flush();
+  graphnodes.flush();
   output.close();
+  graphnodes.close();
+  
 }
