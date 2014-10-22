@@ -74,6 +74,23 @@ void relax(int current_node, int current_origin){
     return;
 }
 
+void iterativeDjikstra ()
+{
+
+    for(int origin=0; origin < 0; origin++)
+      for(int destination=0; destination < _LENGTH; destination++)
+      {
+        if(graph[origin][destination] > 0)
+          if(nodes[0][origin][destination] > nodes[0][origin][destination]+graph[origin][destination])
+          {
+            nodes[0][origin][destination] = nodes[0][origin][destination]+graph[origin][destination];
+            nodes[1][origin][destination] = origin;
+          }
+      }
+
+
+}
+
 void calculateEveryDistance(){
     for(int i = 0; i<_LENGTH; i++){
         nodes[0][i][i] = 0;
@@ -100,11 +117,13 @@ double fittness(gTruck currentTruck, int nNodes, int* nodes_){
 int main()
 {
     InitVars(gTruckCnt, _LENGTH);
-    calculateEveryDistance();
+   // calculateEveryDistance();
+   iterativeDjikstra ();
     for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[0][i][0]);
     printf("\n");
     for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[1][i][0]);
     getchar();
+
 
     return 0;
 }
