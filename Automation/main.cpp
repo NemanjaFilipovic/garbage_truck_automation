@@ -117,11 +117,16 @@ double fittness(gTruck currentTruck, int nNodes, int* nodes_){
 int main()
 {
     InitVars(gTruckCnt, _LENGTH);
-   // calculateEveryDistance();
-   iterativeDjikstra ();
-    for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[0][i][0]);
-    printf("\n");
-    for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[1][i][0]);
+    calculateEveryDistance();
+   //iterativeDjikstra ();
+    for(int cnter = 0; cnter < _LENGTH; cnter++){
+        printf("--------%d-------\n", cnter);
+        for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[0][i][cnter]);
+        printf("\n");
+        for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[1][i][cnter]);
+        printf("\n");
+
+    }
     getchar();
 
 
