@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1414009163 source:c:\users\adam\documents\izrael_project\automation\main.cpp
+	<iostream>
+	<math.h>
+	<stdio.h>
+	<fstream>
+	"GraphAndDijkstra.h"
+
+1414009163 c:\users\adam\documents\izrael_project\automation\graphanddijkstra.h
+
