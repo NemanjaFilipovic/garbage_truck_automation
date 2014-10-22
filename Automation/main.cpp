@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <fstream>
 #include "GraphAndDijkstra.h"
-
+#include "OpenFile.h"
 
 double fittness(gTruck currentTruck, int nNodes, int* nodes_){
     double fit;
@@ -17,6 +17,10 @@ double fittness(gTruck currentTruck, int nNodes, int* nodes_){
 
 int main()
 {
+    //----read File --------
+    FILE* inputFile = fopen("../graphgenerator_AdavancedII/graph.txt", "r");
+    fprintf(inputFile, "something");
+
     InitVars(gTruckCnt, _LENGTH);
     calculateEveryDistance();
 
