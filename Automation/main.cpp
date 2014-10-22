@@ -53,8 +53,8 @@ void InitVars(int numGTrucks, int nGBin){
         for(int y = 0; y<7; y++) gBinArr[i].gProduction[y] = 0;
     }
     for(int x = 0; x < 2; x++)
-        for(int y = 0; y < 2; y++)
-            for(int z = 0; z < 2; z++)
+        for(int y = 0; y < _LENGTH; y++)
+            for(int z = 0; z < _LENGTH; z++)
                 nodes[x][y][z] = _inf;
 
 
@@ -79,7 +79,8 @@ void calculateEveryDistance(){
         nodes[0][i][i] = 0;
         nodes[1][i][i] = i;
         relax(i,i);
-    }
+	}
+
 
     return;
 
