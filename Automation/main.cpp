@@ -9,7 +9,7 @@
 #define maxVolume 1000
 #define maxFuel 150
 #define gTruckCnt 1
-
+#define density 10
 
 //----------
 
@@ -28,6 +28,7 @@ typedef struct{
     int gCurrent;
     int pickUpID;
 } gBin;
+
 int graph[6][6] = {{0, 10, 0, 0, 0, 0},
                    {10, 0, 10, 30, 0, 0},
                    {0, 10, 0, 20, 50, 0},
@@ -35,7 +36,7 @@ int graph[6][6] = {{0, 10, 0, 0, 0, 0},
                    {0, 0, 50, 0, 0, 10},
                    {0, 0, 0, 10, 10, 0}};
 
-int nodes[2][_LENGTH] = {{_inf,_inf,_inf,_inf,_inf,_inf}, {_inf,_inf,_inf,_inf,_inf,_inf}};
+int nodes[2][_LENGTH][_LENGTH];
 gTruck gTruckArr[gTruckCnt];
 gBin gBinArr[_LENGTH];
 
@@ -51,15 +52,21 @@ void InitVars(int numGTrucks, int nGBin){
         gBinArr[i].pickUpID = -1;
         for(int y = 0; y<7; y++) gBinArr[i].gProduction[y] = 0;
     }
+    for(int x = 0; x < 2; x++)
+        for(int y = 0; y < 2; y++)
+            for(int z = 0; z < 2; z++)
+                nodes[x][y][z] = _inf;
+
+
 }
 
-void relax(int current_node){
+void relax(int current_node, int current_origin){
     for(int i=0; i<_LENGTH; i++){
         if(graph[current_node][i] > 0){
-            if(nodes[0][i] > nodes[0][current_node] + graph[i][current_node]){
-                nodes[0][i] = nodes[0][current_node] + graph[i][current_node];
-                nodes[1][i] = current_node;
-                relax(i);
+            if(nodes[0][i][current_origin] > nodes[0][current_node][current_origin] + graph[i][current_node]){
+                nodes[0][i][current_origin] = nodes[0][current_node][current_origin] + graph[i][current_node];
+                nodes[1][i][current_origin] = current_node;
+                relax(i, current_origin);
             }
 
         }
@@ -67,14 +74,35 @@ void relax(int current_node){
     return;
 }
 
+void calculateEveryDistance(){
+    for(int i = 0; i<_LENGTH; i++){
+        nodes[0][i][i] = 0;
+        nodes[1][i][i] = i;
+        relax(i,i);
+    }
+
+    return;
+
+
+}
+
+double fittness(gTruck currentTruck, int nNodes, int* nodes_){
+    double fit;
+    for(int i = 0; i < nNodes; i++){
+
+    }
+    return fit;
+
+}
+
+
 int main()
 {
-    nodes[0][0] = 0;
-    nodes[1][0] = 0;
-    relax(0);
-    for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[0][i]);
+    InitVars(gTruckCnt, _LENGTH);
+    calculateEveryDistance();
+    for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[0][i][0]);
     printf("\n");
-    for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[1][i]);
+    for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[1][i][0]);
     getchar();
 
     return 0;
