@@ -77,7 +77,7 @@ void relax(int current_node, int current_origin){
 void iterativeDjikstra ()
 {
 
-    for(int origin=0; origin < 0; origin++)
+    for(int origin=0; origin < _LENGTH; origin++)
       for(int destination=0; destination < _LENGTH; destination++)
       {
         if(graph[origin][destination] > 0)
