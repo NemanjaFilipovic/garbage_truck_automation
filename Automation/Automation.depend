@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1414013271 source:g:\sustainergy 2014\garbage_truck_automation\automation\main.cpp
+	<iostream>
+	<math.h>
+	<stdio.h>
+	<fstream>
+	"GraphAndDijkstra.h"
+	"OpenFile.h"
+
+1414012539 g:\sustainergy 2014\garbage_truck_automation\automation\graphanddijkstra.h
+
+1414013075 g:\sustainergy 2014\garbage_truck_automation\automation\openfile.h
+
