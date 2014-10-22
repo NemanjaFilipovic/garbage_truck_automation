@@ -1,6 +1,6 @@
 
 //Constants for additional change
-#define _LENGTH  6
+#define _LENGTH  30
 #define _inf 2147483646
 #define maxVolume 1000
 #define maxFuel 150
