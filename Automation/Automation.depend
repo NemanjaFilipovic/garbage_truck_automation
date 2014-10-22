@@ -1,22 +1,29 @@
 # depslib dependency file v1.0
-<<<<<<< HEAD
+158441056 <<<<< HEAD
+
 1414009163 source:c:\users\adam\documents\izrael_project\automation\main.cpp
-=======
-1414013271 source:g:\sustainergy 2014\garbage_truck_automation\automation\main.cpp
->>>>>>> acc25ee3793e0df9a6e0a896146669fac6765d69
+
+1414014879 source:g:\sustainergy 2014\garbage_truck_automation\automation\main.cpp
 	<iostream>
 	<math.h>
 	<stdio.h>
 	<fstream>
 	"GraphAndDijkstra.h"
-<<<<<<< HEAD
-
-1414009163 c:\users\adam\documents\izrael_project\automation\graphanddijkstra.h
-=======
 	"OpenFile.h"
 
-1414012539 g:\sustainergy 2014\garbage_truck_automation\automation\graphanddijkstra.h
+1414013075 25ee3793e0df9a6e0a896146669fac6765d69
+	<iostream>
+	<math.h>
+	<stdio.h>
+	<fstream>
+	"GraphAndDijkstra.h"
 
-1414013075 g:\sustainergy 2014\garbage_truck_automation\automation\openfile.h
->>>>>>> acc25ee3793e0df9a6e0a896146669fac6765d69
+1414013271 D
+
+1414009163 c:\users\adam\documents\izrael_project\automation\graphanddijkstra.h
+	"OpenFile.h"
+
+1414014051 g:\sustainergy 2014\garbage_truck_automation\automation\graphanddijkstra.h
+
+1414014063 g:\sustainergy 2014\garbage_truck_automation\automation\openfile.h
 

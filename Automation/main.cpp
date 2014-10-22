@@ -23,7 +23,7 @@ int main()
     ReadFile();
     InitVars(gTruckCnt, _LENGTH);
     calculateEveryDistance();
-/*
+
     for(int cnter = 0; cnter < _LENGTH; cnter++){
         fprintf(outputFile,"--------%d-------\n", cnter);
         for(int i = 0; i<_LENGTH; i++) fprintf(outputFile,"%d ", nodes[0][i][cnter]);
@@ -33,13 +33,7 @@ int main()
 
     }
     getchar();
-*/
-  for(int x = 0; x < _LENGTH; x++){
 
 
-        for(int y = 0; y <_LENGTH; y++)
-            fprintf(outputFile, "%d ", graph[x][y]);
-        fprintf(outputFile, "\n");
-  }
     return 0;
 }
