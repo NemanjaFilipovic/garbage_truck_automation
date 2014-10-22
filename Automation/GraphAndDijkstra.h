@@ -1,6 +1,6 @@
 
 //Constants for additional change
-#define _LENGTH  30
+#define _LENGTH  6
 #define _inf 2147483646
 #define maxVolume 1000
 #define maxFuel 150
@@ -55,8 +55,8 @@ void InitVars(int numGTrucks, int nGBin){
 void relax(int current_node, int current_origin){
     for(int i=0; i<_LENGTH; i++){
         if(graph[current_node][i] > 0){
-            if(nodes[0][i][current_origin] > nodes[0][current_node][current_origin] + graph[i][current_node]){
-                nodes[0][i][current_origin] = nodes[0][current_node][current_origin] + graph[i][current_node];
+            if(nodes[0][i][current_origin] > nodes[0][current_node][current_origin] + graph[current_node][i]){
+                nodes[0][i][current_origin] = nodes[0][current_node][current_origin] + graph[current_node][i];
                 nodes[1][i][current_origin] = current_node;
                 relax(i, current_origin);
             }
