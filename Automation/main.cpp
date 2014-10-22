@@ -17,23 +17,29 @@ double fittness(gTruck currentTruck, int nNodes, int* nodes_){
 
 int main()
 {
-    //----read File --------
-    FILE* inputFile = fopen("../graphgenerator_AdavancedII/graph.txt", "r");
-    fprintf(inputFile, "something");
+    FILE* outputFile = fopen("outFile", "w");
 
+    //----read File --------
+    ReadFile();
     InitVars(gTruckCnt, _LENGTH);
     calculateEveryDistance();
-
+/*
     for(int cnter = 0; cnter < _LENGTH; cnter++){
-        printf("--------%d-------\n", cnter);
-        for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[0][i][cnter]);
-        printf("\n");
-        for(int i = 0; i<_LENGTH; i++) printf("%d ", nodes[1][i][cnter]);
-        printf("\n");
+        fprintf(outputFile,"--------%d-------\n", cnter);
+        for(int i = 0; i<_LENGTH; i++) fprintf(outputFile,"%d ", nodes[0][i][cnter]);
+        fprintf(outputFile,"\n");
+        for(int i = 0; i<_LENGTH; i++) fprintf(outputFile,"%d ", nodes[1][i][cnter]);
+        fprintf(outputFile,"\n");
 
     }
     getchar();
+*/
+  for(int x = 0; x < _LENGTH; x++){
 
 
+        for(int y = 0; y <_LENGTH; y++)
+            fprintf(outputFile, "%d ", graph[x][y]);
+        fprintf(outputFile, "\n");
+  }
     return 0;
 }

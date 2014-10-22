@@ -1,6 +1,6 @@
 
 //Constants for additional change
-#define _LENGTH  6
+#define _LENGTH  30
 #define _inf 2147483646
 #define maxVolume 1000
 #define maxFuel 150
@@ -26,12 +26,7 @@ typedef struct{
     int pickUpID;
 } gBin;
 
-int graph[6][6] = {{0, 10, 0, 0, 0, 0},
-                   {10, 0, 10, 30, 0, 0},
-                   {0, 10, 0, 20, 50, 0},
-                   {0, 30, 20, 0, 0, 10},
-                   {0, 0, 50, 0, 0, 10},
-                   {0, 0, 0, 10, 10, 0}};
+int graph[_LENGTH][_LENGTH];
 
 int nodes[2][_LENGTH][_LENGTH];
 gTruck gTruckArr[gTruckCnt];
