@@ -28,11 +28,29 @@ Roadmap:
      2*n for garbage amount                   OK
          for emptyer truck ID                 OK
 
-09.11.
+11.10
 
   Cost of the routs
   coloring of the graph                       OK
   Think: Output values of the GraphGenerator  OK
+
+
+20.10
+
+Roadmap for teh complete project:
+
+  Fitness Function Completion - (23.10)
+  introduction part of the article - (23.10)
+  Genetic Algorythm           - (26.10)
+  Data collection             - (30.10)
+  First try with one rtuck    - (05.11)
+  dynamical route change      - (14.11)
+  more trucks                 - (21.11)
+  Sum up the article          - (26.11)
+  making the base of the prez - (30.11)
+  we should have visuals until - (30.11)
+  
+  
   
 
   
