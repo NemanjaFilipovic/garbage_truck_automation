@@ -10,7 +10,7 @@
 //----------
 
 
-using namespace std;
+
 
 int origin = 0;
 typedef struct{
