@@ -3,13 +3,15 @@
 
 1414009163 source:c:\users\adam\documents\izrael_project\automation\main.cpp
 
-1414014879 source:g:\sustainergy 2014\garbage_truck_automation\automation\main.cpp
+1414255541 source:g:\sustainergy 2014\garbage_truck_automation\automation\main.cpp
 	<iostream>
 	<math.h>
 	<stdio.h>
 	<fstream>
+	<ctime>
 	"GraphAndDijkstra.h"
 	"OpenFile.h"
+	"GeneticA.h"
 
 1414013075 25ee3793e0df9a6e0a896146669fac6765d69
 	<iostream>
@@ -23,7 +25,247 @@
 1414009163 c:\users\adam\documents\izrael_project\automation\graphanddijkstra.h
 	"OpenFile.h"
 
-1414015760 g:\sustainergy 2014\garbage_truck_automation\automation\graphanddijkstra.h
+1414252185 g:\sustainergy 2014\garbage_truck_automation\automation\graphanddijkstra.h
 
-1414014063 g:\sustainergy 2014\garbage_truck_automation\automation\openfile.h
+1414252192 g:\sustainergy 2014\garbage_truck_automation\automation\openfile.h
+
+1414255730 g:\sustainergy 2014\garbage_truck_automation\automation\genetica.h
+	"ga.h"
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga.h
+	<ga/gaconfig.h>
+	<ga/GASimpleGA.h>
+	<ga/GASStateGA.h>
+	<ga/GAIncGA.h>
+	<ga/GADemeGA.h>
+	<ga/GADCrowdingGA.h>
+	<ga/GA1DBinStrGenome.h>
+	<ga/GA2DBinStrGenome.h>
+	<ga/GA3DBinStrGenome.h>
+	<ga/GABin2DecGenome.h>
+	<ga/GA1DArrayGenome.h>
+	<ga/GA2DArrayGenome.h>
+	<ga/GA3DArrayGenome.h>
+	<ga/GAListGenome.h>
+	<ga/GATreeGenome.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gaconfig.h
+	<sgidefs.h>
+	<stdlib.h>
+	<assert.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gasimplega.h
+	<ga/GABaseGA.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gabasega.h
+	<ga/gaconfig.h>
+	<ga/gaid.h>
+	<ga/GAParameter.h>
+	<ga/GAStatistics.h>
+	<ga/GAGenome.h>
+	<ga/GAPopulation.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gaid.h
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gaparameter.h
+	<ga/gaconfig.h>
+	<ga/gatypes.h>
+	<ga/std_stream.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gatypes.h
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\std_stream.h
+	<ga/gaconfig.h>
+	<iostream>
+	<fstream>
+	<iostream.h>
+	<fstream.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gastatistics.h
+	<ga/gatypes.h>
+	<ga/gaconfig.h>
+	<ga/GAGenome.h>
+	<ga/GAPopulation.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gagenome.h
+	<ga/gaid.h>
+	<ga/gaconfig.h>
+	<ga/gaerror.h>
+	<ga/GAEvalData.h>
+	<ga/std_stream.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gaerror.h
+	<ga/gatypes.h>
+	<ga/gaconfig.h>
+	<ga/std_stream.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gaevaldata.h
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gapopulation.h
+	<ga/gaconfig.h>
+	<ga/gaid.h>
+	<ga/GASelector.h>
+	<ga/GAScaling.h>
+	<ga/GAEvalData.h>
+	<ga/GAGenome.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gaselector.h
+	<string.h>
+	<ga/gaid.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gascaling.h
+	<ga/gaconfig.h>
+	<ga/gaid.h>
+	<ga/gatypes.h>
+	<ga/GAGenome.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gasstatega.h
+	<ga/GABaseGA.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gaincga.h
+	<ga/GABaseGA.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gademega.h
+	<ga/GABaseGA.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gadcrowdingga.h
+	<ga/GABaseGA.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\ga1dbinstrgenome.h
+	<ga/GABinStr.h>
+	<ga/GAGenome.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gabinstr.h
+	<string.h>
+	<ga/gatypes.h>
+	<ga/garandom.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\garandom.h
+	<stdlib.h>
+	<ga/gatypes.h>
+	<ga/gaconfig.h>
+	<math.h>
+	<limits.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\ga2dbinstrgenome.h
+	<ga/GABinStr.h>
+	<ga/GAGenome.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\ga3dbinstrgenome.h
+	<ga/GABinStr.h>
+	<ga/GAGenome.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gabin2decgenome.h
+	<ga/GA1DBinStrGenome.h>
+	<ga/gabincvt.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gabincvt.h
+	<ga/gatypes.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\ga1darraygenome.h
+	<ga/GAArray.h>
+	<ga/GAGenome.h>
+	<ga/GAAllele.h>
+	<ga/GA1DArrayGenome.C>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gaarray.h
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gaallele.h
+	<ga/gaconfig.h>
+	<ga/garandom.h>
+	<ga/std_stream.h>
+	<ga/GAAllele.C>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gaallele.c
+	<string.h>
+	<ga/GAAllele.h>
+	<ga/gaerror.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\ga1darraygenome.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ga/garandom.h>
+	<ga/GA1DArrayGenome.h>
+	<ga/GAMask.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gamask.h
+	<string.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\ga2darraygenome.h
+	<ga/GAArray.h>
+	<ga/GAGenome.h>
+	<ga/GAAllele.h>
+	<ga/GA2DArrayGenome.C>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\ga2darraygenome.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ga/garandom.h>
+	<ga/GA2DArrayGenome.h>
+	<ga/GAMask.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\ga3darraygenome.h
+	<ga/GAArray.h>
+	<ga/GAGenome.h>
+	<ga/GAAllele.h>
+	<ga/GA3DArrayGenome.C>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\ga3darraygenome.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ga/garandom.h>
+	<ga/GA3DArrayGenome.h>
+	<ga/GAMask.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\galistgenome.h
+	<ga/GAList.h>
+	<ga/GAGenome.h>
+	<ga/GAListGenome.C>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\galist.h
+	<ga/gaerror.h>
+	<ga/GAListBASE.h>
+	<ga/GAList.C>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\galistbase.h
+	<ga/GANode.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\ganode.h
+	<ga/gaconfig.h>
+	<ga/std_stream.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\galist.c
+	<ga/GAList.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\galistgenome.c
+	<stdio.h>
+	<stdlib.h>
+	<ga/GAListGenome.h>
+	<ga/GAMask.h>
+	<ga/garandom.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gatreegenome.h
+	<ga/GATree.h>
+	<ga/GAGenome.h>
+	<ga/GATreeGenome.C>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gatree.h
+	<ga/gaerror.h>
+	<ga/GATreeBASE.h>
+	<ga/GATree.C>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gatreebase.h
+	<ga/GANode.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gatree.c
+	<ga/GATree.h>
+
+1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gatreegenome.c
+	<stdio.h>
+	<stdlib.h>
+	<ga/GATreeGenome.h>
+	<ga/garandom.h>
 
