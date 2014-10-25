@@ -1,0 +1,198 @@
+<html><head><title>GAlib:  Installation Instructions</title>
+
+<!-- by matthew wall                           all rights reserved -->
+<!-- Copyright (c) 1995-1996 Massachusetts Institute of Technology -->
+<!-- distributed with version 2.4.2                                -->
+
+</head>
+<body background="images/Crumpled.gif" bgcolor="dfdfdf" text="000000">
+<strong>Installation Instructions for <a href="GAlib.htm">GAlib</a></strong>
+<p>
+The distribution comes in three flavors:  <a href="#unix">UNIX</a>, <a href="#mac">MacOS</a>, and <a href="#dos">DOS</a>.  The source code for all flavors is the same; they differ only in the names of the files.  The UNIX version is tarred and compressed (.tar.gz), the MacOS version is a Stuffit self-extracting archive in HQX format (.sea.hqx), and the DOS version is in ZIP format (.zip).  Included in the distribution is the complete documentation in html format.
+</p>
+<p>
+There are two things to build: the library and the examples.
+</p>
+<p>
+Be sure to read over the section about template instantiation if your compiler starts to choke and spew errors.  Most errors people encounter are linker errors and are typically due to template instantiation problems.
+</p>
+
+
+<p>
+<a name="unix"><strong>Unix compilation:</strong><br></a><hr>
+First, edit the makefiles in the 'examples' and 'ga' directories.  The makefiles have comments in them about what needs to be editted.  Depending on your compiler and operating system, you may have to edit the config.h header file in the ga directory.  It has preprocessor directives set up for some of the compilers/OSes on which I have been able to test.  First try compiling without editting config.h.  If that does not work, then read the comments in config.h and adjust that file as needed.
+</p>
+<p>
+Once the makefiles are configured, do a 'make' in the base directory.  If you want to install the library on your system, do a 'make install'.  There is also a 'make remove' option to remove the library should you decide you do not want it installed on your system.  The makefiles determine where the library will be installed.
+</p>
+
+
+<p>
+<a name="mac"><strong>MacOS compilation:</strong><br></a><hr>
+Be sure to set the includes path so that the directory in which the GAlib headers are located is searched before the system includes.  Also, set the compiler to use strict ANSI compilation.
+</p>
+<p>
+Do not add the string genome or real number genome source files to any project!  They will not compile correctly.  They are designed to be included by other source files rather than being compiled themselves.  These files are located in the headers directory (and should be there even though they are source files).  They contain specializations of template classes.
+</p>
+<p>
+The FTP site contains project files for some mac compilers.  Each of these expands to a projects directory that contains stationery for creating the examples and a sample project for creating the library.  You can either build the library then link to it from subsequent projects, or you can include specific GAlib files in each new project that you create.
+</p>
+<p>
+If you cannot get the library to build right out-of-the-box, you may need to edit config.h to tailor GAlib to your OS/compiler configuration.  When you edit config.h, use directives similar to those defined for __MWERKS__
+</p>
+
+
+<p>
+<a name="dos"><strong>DOS/Windows compilation:</strong><br></a><hr>
+Use the large memory model.  When you compile the library by itself, use a library page size of 32.  Be sure to set the includes path so that the directory in which the GAlib headers are located is searched.  Also, set the compiler to use strict ANSI compilation.  Define the NO_STREAMS directive (do this in config.h) if you want to compile GAlib with no dependency upon the streams library.
+</p>
+<p>
+Do not add the string genome or real number genome source files to any project!  They will not compile correctly.  They are designed to be included by other source files rather than being compiled themselves.  They contain specializations of template classes.
+</p>
+<p>
+Note that, by default, the library is configured to use the system's 'rand' random number generator when compiled with the Borland compiler.  This is because I've had problems with the better RNGs (ran2) in 16-bit mode.  If you are compiling a 32-bit application and you're using a Borland compiler, you should edit config.h so that USE_RAND is not defined.  In any event, be sure to check the integrity of the random number generator by building and running the randtest example as soon as you build the library.
+</p>
+<p>
+The FTP site contains project files for some PC compilers.  You can either build the library then link to it from subsequent projects, or you can include specific GAlib files in each new project that you create.
+</p>
+<p>
+If you cannot get the library to build right out-of-the-box, you may need to edit config.h to tailor GAlib to your OS/compiler configuration.  When you edit config.h, use directives similar to those defined for __BORLANDC__
+</p>
+
+
+<p>
+<a name="custom"><strong>Custom compilation:</strong><br></a><hr>
+Edit the config.h file.  You should read the comments in config.h so that you know what the machine- and compiler-specific options are.  You can set these options either by #define-ing the macros in config.h or by defining them using your compiler's pre-processor directives.  I have put a few compiler-specific #defines in config.h, but I don't know the characteristics of all the compilers, nor do I know the compiler-specific preprocessor directives (such as __GNUG__).
+</p>
+<p>
+Be sure to set the includes path so that your compiler knows where to look for the GAlib header files.  Also, be sure the compiler is using a strict ANSI compilation mode.
+</p>
+<p>
+You can either compile a library or only the parts of GAlib that you need.  In either case, see the listing below to determine which files you will need.
+</p>
+
+
+<p>
+<a name="files"><strong>Which files are needed in the library:</strong><br></a>
+<hr>
+You <i>must</i> compile the following files:
+</p>
+<blockquote>
+   gaerror.C garandom.C GABaseGA.C GAGenome.C GAParameter.C GAPopulation.C GAScaling.C GASelector.C GAStatistics.C
+</blockquote>
+<p>
+You <i>may</i> compile any of the following groups, depending on which parts you need in your program.  But any group must include <i>all</i> of the files listed for that group:
+</p>
+
+<blockquote>
+<dl>
+<dt>Simple Genetic Algorithm
+  <dd>GASimpleGA.C
+<dt>Steady-State Genetic Algorithm
+  <dd>GASStateGA.C
+<dt>Incremental Genetic Algorithm
+  <dd>GAIncGA.C
+<dt>Deme Genetic Algorithm
+  <dd>GADemeGA.C
+<dt>1DBinaryString Genome:
+  <dd>GA1DBinStrGenome.C GABinStr.C 
+<dt>2DBinaryString Genome: 
+  <dd>GA2DBinStrGenome.C GABinStr.C 
+<dt>3DBinaryString Genome: 
+  <dd>GA3DBinStrGenome.C GABinStr.C 
+<dt>Binary-to-Decimal Genome:  
+  <dd>GABin2DecGenome.C gabincvt.C GA3DBinStrGenome.C GABinStr.C 
+<dt>1DArray Genome:  
+  <dd>GA1DArrayGenome.C GAAllele.C 
+<dt>2DArray Genome:  
+  <dd>GA2DArrayGenome.C GAAllele.C 
+<dt>3DArray Genome:  
+  <dd>GA3DArrayGenome.C GAAllele.C 
+<dt>String Genome:   
+  <dd>GA1DArrayGenome.C GAAllele.C 
+<dt>Real Number Genome:   
+  <dd>GA1DArrayGenome.C GAAllele.C 
+<dt>List Genome:     
+  <dd>GAListGenome.C GAListBASE.C GAList.C
+<dt>Tree Genome:     
+  <dd>GATreeGenome.C GATreeBASE.C GATree.C
+</dl>
+</blockquote>
+<p>
+Do not compile the real genome source file or the string genome source file!  These are specializations of template classes and should be included once (and only once) in one of your source files.  If you are using a real number genome, include real.h in any file that refers to a real number genome and include GARealGenome.C in one (and only one) location in your code.  GARealGenome.C contains a specialization of the one-dimensional array class, so by including it in a single location you will tell the compiler to use the specialization rather than the generic template code.  Do not include it more than once.  The string genome is also a specialization of the one-dimensional array genome, so to use it you should follow the same guidelines (but include the string genome header and source rather than the real number genome header and source).
+</p>
+<p>
+<i>If your compiler uses the Borland automatic instantiation model (see the section about <a href="#instantiation">template instantiation</a>) then you need not compile any of the source files that contain template code.  These include GAAllele.C GA1DArrayGenome.C, GA2DArrayGenome.C, GA3DArrayGenome.C, GAListGenome.C, GAList.C, GATreeGenome.C, GATree.C)</i> 
+</p>
+
+
+
+
+<p>
+<a name="contents"><strong>About the filenames and contents of files:</strong><br></a>
+<hr>
+All of the #include lines in GAlib are of the form '#include &lt;ga/ga.h&gt;'.  I assume that the GA library header and template source files will be kept in the same directory.  For MacOS and DOS this has been replaced with '#include "ga.h"'.  Use your compiler's preferences to configure the search path to include the "ga" directory (where the header files are located) for including header files.
+</p>
+<p>
+The DOS filenames are derived from the UNIX filenames described above.  I have simply shortened the names to 8+3 characters.  Also, .C has been replaced with .cpp for both the MacOS and DOS distributions.
+</p>
+
+
+
+
+<p>
+<a name="instantiation"><strong>Template instantiation issues</strong><br></a>
+<hr>
+If your compiler uses the Cfront automatic instantiation model (code repositories) you should not have to do anything special.
+</p>
+<p>
+If your compiler uses the Borland automatic instantiation model (all template code must be in the header files), then define the BORLAND_INST macro.  This will cause all of the header files with template classes to include the associated source files.  If your compiler uses this method of template instantiation, you do not need to include any of the template source files in your project.
+</p>
+<p>
+If your compiler does not do automatic instantiation (for example, g++ 2.6.8) then define the NO_AUTO_INST macro.  This will force an instantiation in the source files that specialize template classes (for example, the GAStringGenome).  Note that there are (at least) two different syntaxes for forcing instantiation.  The GNU compiler likes 'template class' before the forced instantiation, but the Borland compiler does not.
+</p>
+<p>
+The symptoms of no automatic instantiation are linker warnings about member functions not being found (or defined) for template classes (e.g. GAAlleleSet<float> when you're using real number genomes, or GAAlleleSet<char> when you're using string genomes).
+</p>
+<p>
+If you use the string genome, be sure to include the string genome header file 
+in the source code that 
+refers to string genomes.  Similarly, if you use the real number genome then
+be sure to included the header file for that genome. You must also include the 
+corresponding source file in one (and only one) of your code segments if you 
+use one of these genomes.  The string and real number genomes are treated
+differently than the other genomes in GAlib because they are specializations 
+of template classes.  They are not included in the ga.h header so that they 
+will not force instantiations where they are not needed.
+</p>
+
+
+<p>
+<a name="part"><strong>Compiling specific parts of the library</strong><br></a>
+<hr>
+You can build only part of the library (and thus save space for certain OSes that are limited to 640K) by editting the config.h file.  By default, everything is included in the library.  When you edit the config.h file you can tell the compiler to strip out the parts of the library that you do not plan to use.  You <i>must</i> compile all of the files for the core parts of the library (config.h will weed out the parts you do not want), but you do <i>not</i> have to compile all of the genome files.  To use only selected genomes, compile only the files related to the genome(s) that you want to use (see the groups above for which files go with which genomes).  Some genome classes may have special support files.  Any derived class needs the files that go with the class(es) from which it was derived.
+</p>
+
+
+<p>
+<a name="notemplates"><strong>What to do if your compiler does not understand templates</strong><br></a>
+<hr>
+If your compiler does not support templates, get one that does :)
+</p>
+<p>
+You can compile the library by defining the NO_TEMPLATES preprocessor directive.  If you do this, you can use only the BinaryString genomes (1D, 2D, and 3D).  All of the other genomes are implemented as template classes.  If you define the NO_TEMPLATES directive then you should not compile the following files:
+</p>
+<blockquote>
+GAAllele.C GA1DArrayGenome.C GA2DArrayGenome.C GA3DArrayGenome.C <br>
+GAListGenome.C GAListBASE.C GAList.C <br>
+GATreeGenome.C GATreeBASE.C GATree.C 
+</blockquote>
+If you need one of the template genome types but do not have a compiler that understands templates, you can modify the template files by hand.  You will have to create a file for each type that you want to instantiate.  If you will be instantiating only one type, remove &lt;T&gt; and replace T with the type you are going to instantiate.  If you will be instantiating more than one type then you will have to replace &lt;T&gt; with an appropriate name and replace T with the type.  For example, to create an instance of an 'int' version of the tree object, GATree&lt;int&gt; would become GATreeInt and any occurances of 'T * var' would be replaced with 'int * var'.
+
+<p>
+<hr>
+<small><i>mbwall@mit.edu, 12 November 1996</i></small>
+</p>
+
+</body></html>
+
