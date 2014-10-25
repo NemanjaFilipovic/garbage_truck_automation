@@ -174,9 +174,9 @@ protected:
 
 
 
-#ifdef GALIB_USE_BORLAND_INST
+
 #include <ga/GA1DArrayGenome.C>
-#endif
+
 
 #endif
 

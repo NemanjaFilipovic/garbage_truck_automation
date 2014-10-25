@@ -29,8 +29,9 @@
 
 1414252192 g:\sustainergy 2014\garbage_truck_automation\automation\openfile.h
 
-1414255730 g:\sustainergy 2014\garbage_truck_automation\automation\genetica.h
+1414258752 g:\sustainergy 2014\garbage_truck_automation\automation\genetica.h
 	"ga.h"
+	"ga/GA1DArrayGenome.h"
 
 1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga.h
 	<ga/gaconfig.h>
@@ -162,7 +163,7 @@
 1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\gabincvt.h
 	<ga/gatypes.h>
 
-1173251804 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\ga1darraygenome.h
+1414258237 g:\sustainergy 2014\garbage_truck_automation\automation\galib247\ga\ga1darraygenome.h
 	<ga/GAArray.h>
 	<ga/GAGenome.h>
 	<ga/GAAllele.h>

@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <math.h>
 #include <stdio.h>
@@ -8,16 +9,6 @@
 #include "GeneticA.h"
 using namespace std;
 
-double fittness(gTruck currentTruck, int nNodes, int* nodes_)
-{
-    double fit;
-    for(int i = 0; i < nNodes; i++)
-    {
-
-    }
-    return fit;
-
-}
 
 
 int main()
