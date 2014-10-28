@@ -1,0 +1,59 @@
+﻿Build started 10/26/2014 1:05:25 PM.
+     1>Project "G:\Sustainergy 2014\garbage_truck_automation\galib243\project\library\library.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         G:\Program Files (nSSD)\Visual Studio 2012\VC\bin\CL.exe /c /I..\..\ /Z7 /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /Gm- /EHsc /MTd /GS /Gy- /fp:precise /Za /Zc:wchar_t /Zc:forScope /GR /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\ga\GA1DBinStrGenome.C ..\..\ga\GA2DBinStrGenome.C ..\..\ga\GA3DBinStrGenome.C ..\..\ga\GABaseGA.C ..\..\ga\GABin2DecGenome.C ..\..\ga\gabincvt.C ..\..\ga\GABinStr.C ..\..\ga\GADemeGA.C ..\..\ga\gaerror.C ..\..\ga\GAGenome.C ..\..\ga\GAIncGA.C ..\..\ga\GAListBASE.C ..\..\ga\GAParameter.C ..\..\ga\GAPopulation.C ..\..\ga\GARealGenome.C ..\..\ga\GAScaling.C ..\..\ga\GASelector.C ..\..\ga\GASimpleGA.C ..\..\ga\GASStateGA.C ..\..\ga\GAStatistics.C ..\..\ga\GAStringGenome.C ..\..\ga\GATreeBASE.C
+         GA1DBinStrGenome.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/gaerror.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GA2DBinStrGenome.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/gaerror.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GA3DBinStrGenome.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/gaerror.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GABaseGA.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/GAParameter.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GABin2DecGenome.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/gaerror.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         gabincvt.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/gaerror.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GABinStr.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/gaerror.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GADemeGA.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/garandom.h(94): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/GAParameter.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         gaerror.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/gaerror.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GAGenome.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/gaerror.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GAIncGA.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/GAParameter.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GAListBASE.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/GANode.h(15): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GAParameter.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/gaerror.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GAPopulation.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/gaerror.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GARealGenome.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/garandom.h(94): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/GAAllele.h(21): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GAScaling.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/gaerror.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GASelector.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/gaerror.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GASimpleGA.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/GAParameter.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GASStateGA.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/GAParameter.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GAStatistics.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/gaerror.h(18): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         Generating Code...
+         Compiling...
+         GAStringGenome.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/garandom.h(94): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/GAAllele.h(21): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         GATreeBASE.C
+     1>G:\Sustainergy 2014\garbage_truck_automation\galib243\ga/GANode.h(15): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+         Generating Code...
+     1>Done Building Project "G:\Sustainergy 2014\garbage_truck_automation\galib243\project\library\library.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.65

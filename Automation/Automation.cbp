@@ -39,6 +39,7 @@
 		<Unit filename="GeneticA.h" />
 		<Unit filename="GraphAndDijkstra.h" />
 		<Unit filename="OpenFile.h" />
+		<Unit filename="SustainergyGalib.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

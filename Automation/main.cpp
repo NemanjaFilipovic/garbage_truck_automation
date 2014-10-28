@@ -3,10 +3,12 @@
 #include <math.h>
 #include <stdio.h>
 #include <fstream>
+#include <stdlib.h>
+
 #include <ctime>
 #include "GraphAndDijkstra.h"
 #include "OpenFile.h"
-#include "GeneticA.h"
+#include "SustainergyGalib.h"
 using namespace std;
 
 

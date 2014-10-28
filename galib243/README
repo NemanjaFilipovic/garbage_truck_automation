@@ -1,0 +1,60 @@
+GAlib: A C++ Genetic Algorithm Library
+Copyright (c) 1994-1996 MIT, 1998 Matthew Wall
+10oct98
+
+GAlib is a C++ library of genetic algorithm objects.  With GAlib you can add 
+evolutionary algorithm optimization to almost any program using any data 
+representation and standard or custom selection, crossover, mutation, 
+scaling, and termination methods.  
+
+The library requires a cfront 3.0 compatible C++ compiler.  I have tested 
+GAlib on MacOS using Metrowerks and Symantec development environments, 
+DOS/Windows using Borland C++ and MS VC++, and various UNIX platforms using 
+g++, CC, and DCC.  Some genome classes use templates, but you can define the 
+NO_TEMPLATES flag if your compiler does not understand templates.  The default
+configuration uses (not-necessarily-ansi) streams, but the NO_STREAMS 
+directive lets you turn that off (for use with a GUI, for example).
+
+DOCUMENTATION, UPDATES and MAILING LIST ---------------------------------------
+
+Complete documentation in html format is available in the doc directory.  The 
+FTP site contains PDF and PostScript(tm) versions.  For the most recent 
+installation hints, bug fixes, and announcements, see the documentation at 
+http://lancet.mit.edu/ga/
+
+There are two GAlib mailing lists:  galib@mit.edu and galib-announce@mit.edu
+The first list is an unmoderated list intended as a forum for galib users to
+help each other.  The second is only for announcements about GAlib updates.
+To subscribe, send email to galib-request@mit.edu (or galib-announce-request)
+with the word 'subscribe' in the subject and nothing in the body of the email.
+
+WHERE TO GET IT ---------------------------------------------------------------
+
+The source for this library is ftp://lancet.mit.edu/pub/ga/
+There you will find MacOS, DOS/Windows, and UNIX versions of the library.  The
+source code is the same for all platforms - the only difference is the naming
+of files.  Makefiles for UNIX are included in the UNIX distribution, projects
+for MacOS and Windows compilers are included in those distributions.
+
+COMPILATION -------------------------------------------------------------------
+
+There are two things to build: the library and the examples.  You can build
+the library as a standalone archive, dll, static library, etc.  Or you can
+compile-in only the GAlib files you need for your project.  Installation.html
+in the doc directory has complete details.
+
+Most problems people have when compiling GAlib are due to template instatiation
+issues (not every compiler handles templates the same way).  See the 
+installation notes for details.  The notes also include instructions for 
+dealing with compilers that do not support templates.
+
+BUGS 'n STUFF -----------------------------------------------------------------
+
+If you use GAlib to solve your problems, please let me know how you used it.
+A short paragraph describing the problem(s) on which you are working would be
+wonderful :)
+
+Send bug reports and suggestions for improvements to galib-request@mit.edu.  
+When submitting a bug report, please include the GAlib version number, machine
+type, operating system and version number, and events that led up to you 
+finding the bug.

@@ -1,0 +1,58 @@
+User Licensing Agreement for GAlib
+mbwall 18sep95
+
+GAlib For-profit User/Distributor License Agreement
+-------------------------------------------------------------------------------
+Please contact the MIT Technology Licensing Office at:
+	617.253.6966
+	tlo@mit.edu
+
+
+GAlib Not-for-profit User License Agreement
+-------------------------------------------------------------------------------
+- You may copy and distribute copies of the source code for GAlib in any 
+  medium provided that you consipicuously and appropriately give credit to 
+  the author and keep intact all copyright and disclaimer notices in the 
+  library. 
+
+- You may modify your copy (copies) of GAlib or any portion thereof, but 
+  you may not distribute modified versions of GAlib. You may distribute 
+  patches to the original GAlib as separate files along with the original 
+  GAlib. 
+
+- You may not charge anything for copies of GAlib beyond a fair estimate of 
+  the cost of media and computer/network time required to make and distribute 
+  the copies. 
+
+- Incorporation of GAlib or any portion thereof into commercial software, 
+  distribution of GAlib for-profit, or use of GAlib for other for-profit 
+  purposes requires a special agreement with the the MIT technology licensing 
+  office (TLO). 
+
+- Any publications of work based upon experiments that use GAlib must include 
+  a suitable acknowledgement of GAlib.  A suggested acknowledgement is: 
+  "The software for this work used the GAlib genetic algorithm package, 
+  written by Matthew Wall at the Massachusetts Institute of Technology." 
+
+- The author of GAlib and MIT assume absolutely no responsibility for the 
+  use or misuse of GAlib. In no event shall the author of GAlib or MIT be 
+  liable for any damages resulting from use or performance of GAlib. 
+
+
+
+
+
+
+
+
+The GNU portions of the GAlib distribution 
+-------------------------------------------------------------------------------
+
+  The portions of GAlib (see below) that contain code from the GNU
+  g++ library are covered under the terms of the GNU Public
+  License. As such they are freely available and do not fall under the
+  terms of the GAlib licensing conditions above. 
+
+  The portions of GAlib that are based upon GNU code are all in the
+  'gnu' directory in the examples directory (in GAlib release 2.3.2
+  and later). 

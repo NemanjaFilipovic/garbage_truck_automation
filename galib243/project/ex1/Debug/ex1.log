@@ -1,0 +1,11 @@
+﻿Build started 10/26/2014 12:59:46 PM.
+     1>Project "G:\Sustainergy 2014\garbage_truck_automation\galib243\project\ex1\ex1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         G:\Program Files (nSSD)\Visual Studio 2012\VC\bin\CL.exe /c /I..\..\ /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\examples\ex1.C
+         ex1.C
+     1>g:\sustainergy 2014\garbage_truck_automation\galib243\examples\ex1.c(17): fatal error C1083: Cannot open include file: 'iostream.h': No such file or directory
+     1>Done Building Project "G:\Sustainergy 2014\garbage_truck_automation\galib243\project\ex1\ex1.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.07
