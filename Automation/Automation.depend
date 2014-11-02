@@ -3,15 +3,16 @@
 
 1414009163 source:c:\users\adam\documents\izrael_project\automation\main.cpp
 
-1414255541 source:g:\sustainergy 2014\garbage_truck_automation\automation\main.cpp
+1414925614 source:g:\sustainergy 2014\garbage_truck_automation\automation\main.cpp
 	<iostream>
 	<math.h>
 	<stdio.h>
 	<fstream>
+	<stdlib.h>
 	<ctime>
 	"GraphAndDijkstra.h"
 	"OpenFile.h"
-	"GeneticA.h"
+	"SustainergyGalib.h"
 
 1414013075 25ee3793e0df9a6e0a896146669fac6765d69
 	<iostream>
@@ -25,9 +26,9 @@
 1414009163 c:\users\adam\documents\izrael_project\automation\graphanddijkstra.h
 	"OpenFile.h"
 
-1414252185 g:\sustainergy 2014\garbage_truck_automation\automation\graphanddijkstra.h
+1414921216 g:\sustainergy 2014\garbage_truck_automation\automation\graphanddijkstra.h
 
-1414252192 g:\sustainergy 2014\garbage_truck_automation\automation\openfile.h
+1414248592 g:\sustainergy 2014\garbage_truck_automation\automation\openfile.h
 
 1414258752 g:\sustainergy 2014\garbage_truck_automation\automation\genetica.h
 	"ga.h"
@@ -269,4 +270,8 @@
 	<stdlib.h>
 	<ga/GATreeGenome.h>
 	<ga/garandom.h>
+
+1414925684 g:\sustainergy 2014\garbage_truck_automation\automation\sustainergygalib.h
+	<vector>
+	<ctime>
 

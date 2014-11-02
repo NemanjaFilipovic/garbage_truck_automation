@@ -27,8 +27,11 @@ int main()
     start = clock();
     calculateEveryDistance();
     printf("Time of execution: %d ms", (clock() - start));
+    CreateInitialPopulation();
+    cout << endl << "Masses: ";
 
-
+    for(int i = 0; i<_LENGTH; i++) cout << gBinArr[i].gCurrent << " ";
+    cout << endl;
     for(int cnter = 0; cnter < _LENGTH; cnter++)
     {
         fprintf(outputFile,"--------%d-------\n", cnter);
@@ -38,6 +41,10 @@ int main()
         fprintf(outputFile,"\n");
 
     }
+    for(int i = 0; i< _INITIAL_POPULATION_SIZE; i++){
+        fittness(Population[i]);
+    }
+    fclose(outputFile);
     //getchar();
 
 
