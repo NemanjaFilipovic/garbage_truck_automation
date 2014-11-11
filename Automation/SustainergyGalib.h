@@ -44,13 +44,13 @@ void CreateInitialPopulation()
 
             } else{ goto startOfRandomization; cout << "'";};
         }
-        for(int s = 0; s <= _LENGTH; s++) cout << CurrentGenome.GbinIndex[s] << " ";
+
         Population.push_back(CurrentGenome);
-        cout << endl;
+
     }
     return;
 }
-
+/*
 void CrossOver(genome Mother, genome Father)
 {
 
@@ -70,7 +70,41 @@ void CrossOver(genome Mother, genome Father)
     Population.push_back(daughter);
     return;
 }
+*/
 
+genome MixGenes(genome first, genome second, int crossOverPnt){
+    genome result;
+    for(int i = 0; i < _LENGTH; i++)
+        result.GbinIndex[i] = first.GbinIndex[i];
+    for(int i = 0; i < crossOverPnt; i++){
+        int tmp = result.GbinIndex[i];
+        result.GbinIndex[i] = second.GbinIndex[i];
+        for(int y = i + 1; y < _LENGTH; y++)
+            if(result.GbinIndex[y] == result.GbinIndex[i]){
+                result.GbinIndex[y] = tmp;
+                break;
+            }
+
+
+    }
+    return result;
+
+}
+
+void CrossOverPMX(genome Mother, genome Father)
+{
+    genome son, daughter;
+    int crossOverPoint = rand() % _LENGTH;
+    cout << "Cross pnt: " << crossOverPoint << endl;
+    son = MixGenes(Father, Mother, crossOverPoint);
+    daughter = MixGenes(Mother, Father, crossOverPoint);
+    Population.push_back(son);
+    Population.push_back(daughter);
+    return;
+
+
+
+}
 void Mutate(genome* GenomeToMutate)
 {
 
@@ -99,5 +133,9 @@ double fittness(genome g)
     cout << endl << "travelled: " << distanceTravelled << " Mass: " << garbageMass << endl;
 
     return fit;
+}
+void processGeneration(){
+
+    return;
 }
 
