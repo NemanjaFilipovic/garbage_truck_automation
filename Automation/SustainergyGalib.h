@@ -1,12 +1,14 @@
 #include <vector>
 #include <ctime>
 #define _INITIAL_POPULATION_SIZE 5
-
+#define _MORTALITY 2
+#define _MUTATION_PROBABILITY 10
 using namespace std;
 
 typedef struct
 {
     int GbinIndex[_LENGTH + 1];
+    double FittnessScore;
 } genome;
 
 vector<genome> Population;
@@ -134,8 +136,27 @@ double fittness(genome g)
 
     return fit;
 }
-void processGeneration(){
+bool compare(const genome &a, const genome &b){ return a.FittnessScore < b.FittnessScore;}
 
+void processGeneration(){
+    for(int i = 0; i < Population.size(); i++)
+        Population[i].FittnessScore = fittness(Population[i]);
+    std::sort(Population.begin(), Population.end(), compare);
+    for(int i = Population.size() - 1; i>=Population.size()-_MORTALITY; i--){
+        Population.pop_back();
+    }
+    for(int i = 0; i < _MORTALITY / 2; i++){
+        int rand1 = rand() % Population.size();
+        int rand2;
+        for(rand2 = rand() % Population.size(); rand2==rand1; rand2 = rand() % Population.size());
+        CrossOverPMX(Population[rand1], Population[rand2]);
+
+    }
+
+    //TODO if not diverse enough change this!!! (or include new animals)
+    for(int i = _MORTALITY; i < Population.size(); i++){
+        if(rand() % 100 < _MUTATION_PROBABILITY) Mutate(&Population[i]);
+    }
     return;
 }
 

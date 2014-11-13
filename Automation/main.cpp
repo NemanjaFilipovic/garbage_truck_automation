@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <fstream>
 #include <stdlib.h>
-
+#include <algorithm>
 #include <ctime>
 #include "GraphAndDijkstra.h"
 #include "OpenFile.h"
