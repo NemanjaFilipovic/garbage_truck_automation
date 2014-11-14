@@ -32,15 +32,8 @@ int main()
 
     for(int i = 0; i<_LENGTH; i++) cout << gBinArr[i].gCurrent << " ";
     cout << endl;
-
-    cout << "Population: " << endl;
-
-    CrossOverPMX(Population.at(0), Population.at(1));
-    for(int i = 0; i < Population.size(); i++){
-        cout << "Animal " << i << ": ";
-        for(int y = 0; y < _LENGTH; y++) cout << Population[i].GbinIndex[y] << " ";
-        cout << endl;
-    }
+    for(int smthng = 0; smthng < 5; smthng++)
+        processGeneration();
     for(int cnter = 0; cnter < _LENGTH; cnter++)
     {
         fprintf(outputFile,"--------%d-------\n", cnter);

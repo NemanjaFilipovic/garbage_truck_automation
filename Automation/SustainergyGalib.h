@@ -126,23 +126,36 @@ double fittness(genome g)
     double distanceTravelled = 0;
     double garbageMass = 0;
 
-    for(int i = 0; i<=_LENGTH; i++){
+    for(int i = 1; i<_LENGTH; i++){
             distanceTravelled += nodes[0][g.GbinIndex[i]][prevGBin];
             prevGBin = g.GbinIndex[i];
             garbageMass += gBinArr[g.GbinIndex[i]].gCurrent;
 
     }
-    cout << endl << "travelled: " << distanceTravelled << " Mass: " << garbageMass << endl;
-
+    cout << "travelled: " << distanceTravelled << " Mass: " << garbageMass << endl;
+    fit = garbageMass/distanceTravelled;
     return fit;
 }
-bool compare(const genome &a, const genome &b){ return a.FittnessScore < b.FittnessScore;}
-
+bool compare(const genome &a, const genome &b){ return a.FittnessScore > b.FittnessScore;}
+int genN = 0;
 void processGeneration(){
+    cout << " ------------Fittness calculation-----------------" << endl;
     for(int i = 0; i < Population.size(); i++)
         Population[i].FittnessScore = fittness(Population[i]);
+
     std::sort(Population.begin(), Population.end(), compare);
-    for(int i = Population.size() - 1; i>=Population.size()-_MORTALITY; i--){
+
+    cout << endl << "-------------- Generation " << genN << "---------------" << endl;
+    for(int i = 0; i < Population.size(); i++){
+        cout << "Animal: " << i << ": ";
+        for(int y = 0; y < _LENGTH; y++){
+            cout << Population[i].GbinIndex[y] << " ";
+        }
+        cout << "Animal fitness: " << Population[i].FittnessScore << endl;
+    }
+    genN++;
+
+    for(int i = 0; i<_MORTALITY; i++){
         Population.pop_back();
     }
     for(int i = 0; i < _MORTALITY / 2; i++){
@@ -157,6 +170,7 @@ void processGeneration(){
     for(int i = _MORTALITY; i < Population.size(); i++){
         if(rand() % 100 < _MUTATION_PROBABILITY) Mutate(&Population[i]);
     }
+
     return;
 }
 
